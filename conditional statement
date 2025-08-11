@@ -1,0 +1,21 @@
+public class problem1conditional {
+
+	public static void main(String[] args) {
+	int num=10;
+	if (num==10)
+	{
+		System.out.println("the num is eual to 10");
+	}
+	if(num<7) {
+		System.out.println("the number is less than 7");
+	}
+	if(num>10) {
+		System.out.println("the number is greater than 10");
+	}
+	else {
+		System.out.println("nothing");
+	}
+
+	}
+
+}
