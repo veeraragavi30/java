@@ -1,0 +1,35 @@
+public class problem4bit {
+
+	public static void main(String[] args) {
+	int  num=27;
+	int num2=32;
+	System.out.println(num&num2);
+	System.out.println(num|num2);
+     System.out.println(num^num2);  
+     
+     int  num3=60;
+ 	int num4=17;
+ 	System.out.println(num3&num4);
+ 	System.out.println(num3|num4);
+      System.out.println(num3^num4);
+      
+      int  num5=15;
+  	int num6=47;
+  	System.out.println(num5&num6);
+  	System.out.println(num5|num6);
+       System.out.println(num5^num6);
+       
+       int  num7=8;
+   	int num8=2;
+   	System.out.println(num7&num8);
+   	System.out.println(num7|num8);
+        System.out.println(num7^num8);
+        
+        int  num9=19;
+    	int num10=36;
+    	System.out.println(num9&num10);
+    	System.out.println(num9|num10);
+         System.out.println(num9^num10);
+	}
+
+}
