@@ -1,0 +1,6 @@
+class Age{
+public static void(String args[])
+{
+system.out.println("Age is:20");
+}
+}
