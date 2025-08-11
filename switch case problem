@@ -1,0 +1,40 @@
+public class problem5switch {
+
+	public static void main(String[] args) {
+	int num=5;
+	switch(num) {
+	case 0:
+	{
+		System.out.println("sunday");
+	}
+	case 1:
+	{
+		System.out.println("monday");
+	}
+	case 2:
+	{
+		System.out.println("tuesday");
+	}
+	case 3:
+	{
+		System.out.println("wednesday");
+	}
+	case 4:
+	{
+		System.out.println("thursday");
+	}
+	case 5:
+	{
+		System.out.println("friday");
+	}
+	case 6:
+	{
+		System.out.println("saturday");
+    }
+	default:
+	{
+		System.out.println("nothing");
+     }
+	}
+	}
+}
