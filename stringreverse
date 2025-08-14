@@ -1,0 +1,16 @@
+package day7;
+public class problemrev{
+	public static void main(String[] args) {
+		StringBuffer a = new StringBuffer("hello world");
+		System.out.println(a);
+		a.reverse();
+		System.out.println(a);
+		String str=a.toString();
+		String[] word=str.split(" ");
+		for(String var:word) {
+			System.out.println(var);
+		}
+		
+	}
+
+}
