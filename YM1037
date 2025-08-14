@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MinimumReplays {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();  
+        int k = sc.nextInt();  
+
+        sc.close();
+
+        int minReplays = 2;
+
+        for (int r = 1; r <= n; r++) {
+            int minScoreWithRReplays = 2 * (n - r);
+            int maxScore = 2 * n;
+
+            if (k >= minScoreWithRReplays && k <= maxScore) {
+                minReplays = r;
+                break;
+            }
+        }
+
+        System.out.println("The minimum count of n levels is " + minReplays);
+    }
+}
