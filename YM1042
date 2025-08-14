@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();  
+        String b = sc.next();
+        sc.close();
+
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+        int carry = 0;
+        int carryCount = 0;
+
+        
+        while (i >= 0 || j >= 0) {
+            int da = (i >= 0) ? a.charAt(i--) - '0' : 0;
+            int db = (j >= 0) ? b.charAt(j--) - '0' : 0;
+            int sum = da + db + carry;
+            if (sum >= 10) {
+                carry = 1;
+                carryCount++;
+            } else {
+                carry = 0;
+            }
+        }
+
+        System.out.println(carryCount);
+    }
+}
