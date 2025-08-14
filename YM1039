@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class MysticalScrolls {
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt(); 
+        int y = sc.nextInt();  
+        int n = sc.nextInt();  
+
+        sc.close();
+
+        int gcdX = gcd(x, n);
+        int gcdY = gcd(y, n);
+        if (gcdX >= gcdY) {
+            System.out.println("Alaric unravels the most Mystical Scrolls in the Grand Library!");
+        } else {
+            System.out.println("Seraphina unravels the most Mystical Scrolls in the Grand Library!");
+        }
+    }
+}
