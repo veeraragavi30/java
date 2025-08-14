@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class EnchantedQuest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt(); 
+        int[] artifacts = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            artifacts[i] = sc.nextInt(); 
+        }
+        
+        int elusive = sc.nextInt();  
+        
+        boolean found = false;
+        for (int artifact : artifacts) {
+            if (artifact == elusive) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            System.out.println("Elusive Artifact Found!");
+        } else {
+            System.out.println("Elusive Artifact Not Found!");
+        }
+    }
+}
