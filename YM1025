@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class ChromaticSensor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String color = scanner.nextLine().trim().toUpperCase(); 
+
+        switch (color) {
+            case "BLUE":
+                System.out.println("The Chromatic Horizon whispers: It is Dawn");
+                break;
+            case "RED":
+                System.out.println("The Chromatic Horizon reveals: It is Dusk");
+                break;
+            default:
+                System.out.println("The Chromatic Riddle unfolds: Invalid Input");
+        }
+    }
+}
