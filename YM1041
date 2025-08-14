@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class solution{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long N = sc.nextLong();
+        sc.close();
+
+        long remaining = N;
+        long digits = 1;
+        long start = 1;
+
+        while (true) {
+            long end = start * 10 - 1;
+            long count = end - start + 1;
+            long totalDigits = count * digits;
+
+            if (remaining > totalDigits) {
+                remaining -= totalDigits;
+                digits++;
+                start *= 10;
+            } else {
+                long fullPages = remaining / digits;
+                if (remaining % digits != 0) {
+                    System.out.println("Impossible!");
+                } else {
+                    long pages = start + fullPages - 1;
+                    System.out.println(pages);
+                }
+                break;
+            }
+        }
+    }
+}
