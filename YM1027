@@ -1,14 +1,11 @@
 import java.util.Scanner;
-
-public class ZaraTimeLeap {
+public class Main{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
         int y = scanner.nextInt();
         double ti = scanner.nextDouble();
         double tj = scanner.nextDouble(); 
-
-        scanner.close();
         if (x <= 0 || x >= 32767 || y <= 0 || y >= 32767) {
             System.out.println("Invalid Input");
             return;
@@ -18,8 +15,6 @@ public class ZaraTimeLeap {
             System.out.println("Invalid Input");
             return;
         }
-
-        // Convert hh.mm format to total minutes
         int tiHours = (int) ti;
         int tiMinutes = (int) ((ti - tiHours) * 100);
         int totalMinutesTi = tiHours * 60 + tiMinutes;
