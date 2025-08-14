@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class MagicalDuel {
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int gokulPower = sc.nextInt();
+        int minorPower = sc.nextInt();
+        int totalPower = sc.nextInt();
+
+        int gokulOutput = 0;
+        int minorOutput = 0;
+        boolean isGokulTurn = true;
+        while (totalPower > 0) {
+            if (isGokulTurn) {
+                int currentGCD = gcd(gokulPower, totalPower);
+                gokulOutput += currentGCD;
+                totalPower -= currentGCD;
+            } else {
+                int currentGCD = gcd(minorPower, totalPower);
+                minorOutput += currentGCD;
+                totalPower -= currentGCD;
+            }
+            isGokulTurn = !isGokulTurn;
+        }
+        if (gokulOutput > minorOutput) {
+            System.out.println("Winner: Gokul");
+        } else if (minorOutput > gokulOutput) {
+            System.out.println("Winner: Minor");
+        } else {
+            System.out.println("It's a draw!");
+        }
+    }
+}
