@@ -1,0 +1,24 @@
+  import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String b1 = sc.nextLine().trim().toLowerCase();
+        String b2 = sc.nextLine().trim().toLowerCase();
+        String b3 = sc.nextLine().trim().toLowerCase();
+
+        if (!isValid(b1) || !isValid(b2) || !isValid(b3)) {
+            System.out.println("Invalid Input");
+        } else if (b1.equals("engaged") && b2.equals("engaged") && b3.equals("engaged")) {
+            System.out.println("Initiating Warp Drive!");
+        } else {
+            System.out.println("Hold On! Some Belts are Adrift.");
+        }
+
+        sc.close();
+    }
+
+    static boolean isValid(String status) {
+        return status.equals("engaged") || status.equals("disengaged");
+    }
+}
