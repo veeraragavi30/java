@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class FamilyMatchChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int[] harmony = new int[n];
+        int[] melody = new int[n];
+        
+       
+        for (int i = 0; i < n; i++) {
+            harmony[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < n; i++) {
+            melody[i] = sc.nextInt();
+        }
+        if (Arrays.equals(harmony, melody)) {
+            System.out.println("Match Found!");
+        } else {
+            System.out.println("No Match Found!");
+        }
+    }
+}
