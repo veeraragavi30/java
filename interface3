@@ -1,0 +1,22 @@
+package day9;
+interface sum{
+	int max=100;
+	void show();
+	static void display()
+	{
+		System.out.println("Displaying");
+	}
+}
+class MyClass implements sum{
+	public void show()
+	{
+		System.out.println("showing");
+	}
+}
+	public class problem3{
+		public static void main(String[]args) {
+			sum .display();
+			MyClass obj=new MyClass();
+			obj.show();
+		}
+	}
