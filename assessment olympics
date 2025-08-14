@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int totalStudents = sc.nextInt();
+        int totalGroups = sc.nextInt();
+
+        int studentsPerGroup = totalStudents / totalGroups;
+        int leftOut = totalStudents % totalGroups;
+
+        System.out.println("The number of students in each team is " + studentsPerGroup + " and left out is " + leftOut);
+    }
+}
