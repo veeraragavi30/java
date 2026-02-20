@@ -1,0 +1,55 @@
+import java.util.*;
+class node{
+  int data;
+  node L,R;
+  node(int d)
+  {
+    data=d;
+    L=R=null;
+  }
+}
+public class Main{
+  static node root=null;
+  static void inorder(node r)
+  {
+    if(r==null)
+    return;
+    inorder(r.L);
+    System.out.println(r.data+" ");
+    inorder(r.R);
+  }
+  static void preorder(node r)
+  {
+     if(r==null)
+    return;
+    System.out.println(r.data+" ");
+    preorder(r.L);
+    preorder(r.R);
+  }
+  static void postorder(node r)
+  {
+     if(r==null)
+    return;
+    System.out.println(r.data+" ");
+    postorder(r.L);
+    postorder(r.R);
+  }
+  public static void main(String[]args){
+    root=new node(21);
+  root.L=new node(17);
+  root.R=new node(25);
+  root.L.L=new node(5);
+  root.L.R=new node(6);
+  root.L.R.L=new node(13);
+   root.R.L=new node(20);
+    root.R.L.R=new node(12);
+     root.R.L.R.L=new node(99);
+      root.R.R=new node(1);
+System.out.print("inorder Traversal");
+inorder(root);
+System.out.print("\npreorder Traversal");
+preorder(root);
+System.out.print("\npostorder Traversal");
+postorder(root);
+}
+}
