@@ -1,0 +1,42 @@
+import java.util.*;
+class node{
+  int data;
+  node next;
+  node(int d)
+  {
+    data=d;
+    next=null;
+  }
+}
+public class Rag{
+  static node head=null,tail=null;
+  static void ins(int v){
+  node n=new node(v);
+  if(head==null)
+  {
+    head=tail=n;
+  }
+  else{
+    tail.next=n;
+    tail=n;
+  }
+  }
+  static void display(){
+  node temp=head;
+  while(temp!=null)
+  {
+    System.out.print(temp.data+" ");
+    temp=temp.next;
+  }
+  }
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the number of elements");
+    int n=sc.nextInt();
+   System.out.println("Enter elements");
+  for(int i=0;i<n;i++){
+    ins(sc.nextInt());
+  }
+  System.out.println("linked list:");
+  display();
+  }
