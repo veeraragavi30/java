@@ -1,0 +1,67 @@
+import java.util.*;
+class node {
+    int data;
+    node next;
+
+    node(int d) {
+        data = d;
+        next = null;
+    }
+}
+public class Main {
+    static node front = null, rear = null;
+        node n = new node(v);
+        if(front == null)
+        {
+            front = rear = n;
+       } else {
+            rear.next = n;
+            rear = n;
+        }
+    }
+    static void display() {
+        node temp = front;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+    static int dequeue()
+    {
+      if(isEmpty())
+      {
+        return-1;
+      }
+      int p=front.data;
+      front=front.next;
+      if(front=null)
+      rear=null;
+      size--;
+      return p;
+    }
+    static boolean isEmpty()
+    {
+      return fr==null;
+    }
+    static int peek()
+    {
+      return front.data;
+    }
+    static int Q_Size()
+    {
+      return size;
+    }
+    public static void main(String[]args){
+      Scanner sc=new Scanner(System.in);
+      size=sc.nextInt();
+      for(int i=1;i<=size;i++)
+      {
+        enqueue(sc.nextInt());
+        dis();
+        System.out.println("deleted element : "+dequeue());
+         System.out.println("peel element : "+peek());
+          System.out.println(isEmpty()?"Queue is empty":"Queue is not empty");
+           System.out.println("Current Queue size : "+Q_Size());
+      }
+    }
+     
